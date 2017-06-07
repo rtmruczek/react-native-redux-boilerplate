@@ -1,0 +1,48 @@
+{
+  "extends": [
+    "recommended/esnext",
+    "recommended/esnext/style-guide",
+    "recommended/node",
+    "recommended/node/style-guide",
+    "recommended/react-native",
+    "recommended/react-native/style-guide"
+  ],
+  "rules": {
+    "no-console": "warn",
+    "camelcase": "warn",
+    "no-unused-vars": "warn",
+    "no-multi-spaces": "warn",
+    "no-multiple-empty-lines":["warn", {"max": 2}],
+    "no-invalid-this": "off",
+    "indent": ["warn", 2],
+    "comma-dangle": "warn",
+    "object-curly-spacing": "warn",
+    "object-curly-newline": "off",
+    "no-trailing-spaces": "warn",
+    "import/no-nodejs-modules": "off",
+    "no-use-before-define": "off",
+    "class-methods-use-this": "warn",
+    "space-before-function-paren": "warn",
+    "react/jsx-curly-spacing": "warn",
+    "react/prefer-stateless-function": "off",
+    "react/no-direct-mutation-state": "warn",
+    "react/prop-types": "warn",
+    "react/sort-prop-types": "warn",
+    "react/jsx-indent": "off",
+    "react/jsx-handler-names": "off",
+    "react/jsx-space-before-closing": "warn",
+    "no-extra-parens": "off",
+    "react/jsx-closing-bracket-location": "off",
+    "react/jsx-indent-props": "off",
+    "react/jsx-sort-props": "off",
+    "import/prefer-default-export": "warn",
+    "import/no-namespace": "off",
+    "sort-imports": "off",
+    "template-curly-spacing": "off",
+    "curly": "off",
+    "semi": "warn"
+  },
+  "globals": {
+    "__DEV__": true
+  }
+}
