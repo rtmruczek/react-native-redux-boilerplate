@@ -16,7 +16,6 @@ This is a react native boilerplate with some common interactions that a mobile a
 2. Change the name of your app in `./index.ios.js` and `./index.android.js`
 
 `yarn` or `npm install`
-`react-native eject`
 
 Then,
 
