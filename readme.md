@@ -21,7 +21,3 @@ This is a react native boilerplate with some common interactions that a mobile a
 Then,
 
 `react-native run-ios`
-
-
-### Notes
-If you check 
