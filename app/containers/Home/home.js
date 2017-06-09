@@ -2,17 +2,15 @@ import React, { Component } from 'react'
 import { PropTypes } from 'prop-types'
 import { View, Text, TouchableOpacity } from 'react-native'
 
-import HomeModal from './HomeModal'
 import { styles } from '../../styles'
+import { modalTypes } from '../../components/Modal'
 
 class Home extends Component {
 
   openModal = () => {
     this.context.store.dispatch({
       type: 'SHOW_MODAL',
-      payload: (
-        <HomeModal />
-      ),
+      payload: modalTypes.HomeModal,
     })
   }
 

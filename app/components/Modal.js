@@ -2,9 +2,19 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Animated, Easing, TouchableWithoutFeedback } from 'react-native'
 
+import HomeModal from './HomeModal'
+
+const MODAL_MAPPING = {
+  HomeModal,
+}
+export const modalTypes = {
+  HomeModal: 'HomeModal',
+}
+
 class Modal extends Component {
 
   static propTypes = {
+    modalType: PropTypes.string,
     dismiss: PropTypes.func, // this is automatically injected by the modal renderer if no method is provided
   }
   constructor (props) {
@@ -35,6 +45,10 @@ class Modal extends Component {
   }
 
   render () {
+
+    const { modalType, dismiss } = this.props
+    const SpecificModal = MODAL_MAPPING[modalType]
+
     return (
        <TouchableWithoutFeedback
           onPress={ () => {} }
@@ -51,11 +65,7 @@ class Modal extends Component {
                 borderRadius: 7,
                 borderWidth: 1,
                 justifyContent: 'space-around' } }>
-                {
-                  React.cloneElement(this.props.children, {
-                    dismiss: this.props.dismiss,
-                  })
-                }
+                <SpecificModal dismiss={ dismiss } />
               </Animated.View>
       </TouchableWithoutFeedback>
     )

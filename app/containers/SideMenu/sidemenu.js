@@ -11,7 +11,7 @@ class SideMenuComponent extends Component {
 
   static propTypes = {
     dismissModal: PropTypes.func,
-    modal: PropTypes.object,
+    modal: PropTypes.string,
     navigationState: PropTypes.object, // automatically injected into props by react-native-router-flux
     onNavigate: PropTypes.func, // automatically injected into props by react-native-router-flux
   }
@@ -29,10 +29,9 @@ class SideMenuComponent extends Component {
               <View
                 style={ styles.transparentOverlay }>
                 <Modal
-                 dismiss={ modalToDisplay.props.dismiss || this.props.dismissModal }
-                 >
-                 {modalToDisplay}
-                 </Modal>
+                 modalType={ modalToDisplay }
+                 dismiss={ this.props.dismissModal }
+                 />
                 </View>
               </TouchableWithoutFeedback>) : null
 
